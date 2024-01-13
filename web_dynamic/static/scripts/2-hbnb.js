@@ -12,8 +12,8 @@ const printAmenities = (list) => {
 };
 
 // function check the status
-const checkStatus = () =>{
-  $.get("http://0.0.0.0:5001/api/v1/status/", 
+const checkStatus = () => {
+  $.get('http://0.0.0.0:5001/api/v1/status/',
     function (data) {
       if (data.status === 'OK') {
         $('#api_status').addClass('available');
@@ -21,12 +21,11 @@ const checkStatus = () =>{
         $('#api_status').RemoveClass('available');
       }
     },
-    "Json"
+    'Json'
   );
-}
+};
 
 $(function () {
-
   checkStatus();
   let ls = [];
   // lisen if input is checked or unchecked
